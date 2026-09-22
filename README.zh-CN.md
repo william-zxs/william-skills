@@ -22,6 +22,44 @@
 - 网络访问：首次在线构建需要访问 Lex 官网、RSS 和 YouTube 缩略图
 - Codex CLI 及模型访问权限：仅翻译到非英语语言时需要
 
+## 通过 Agent 安装
+
+通过 GitHub 为 Codex 安装此 skill：
+
+```bash
+npx skills add william-zxs/william-skills \
+  --skill lex-fridman-youtube-to-epub \
+  --agent codex
+```
+
+上述命令安装到当前项目；若希望所有 Codex 项目都可使用，请附加 `--global`：
+
+```bash
+npx skills add william-zxs/william-skills \
+  --skill lex-fridman-youtube-to-epub \
+  --agent codex --global
+```
+
+## 给 Agent 的任务信息
+
+请向 Agent 提供以下信息：
+
+- 完整 Lex Fridman Podcast YouTube 链接或 11 位视频 ID（必填）
+- 生成 EPUB 的输出目录（必填）
+- 目标语言；不提供时生成英文原文
+- 仅在自动发现失败且来源已核实时提供 Transcript URL、标题、嘉宾或封面等覆盖信息
+
+例如：
+
+```text
+使用 lex-fridman-youtube-to-epub skill，将
+https://www.youtube.com/watch?v=NYFGCESmikA 制作为简体中文 EPUB。
+将所有生成文件写入 /path/to/output。交付前核对官方 Transcript 和封面，
+然后报告 EPUB 路径。不要发送邮件。
+```
+
+如需英文原文，将“简体中文 EPUB”改成“英文 EPUB”，或不指定目标语言。若视频无法精确匹配官方逐字稿，skill 会清楚报错；不要要求它用 YouTube 字幕替代。
+
 ## 快速开始
 
 从仓库根目录运行：

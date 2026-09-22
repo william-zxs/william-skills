@@ -22,6 +22,44 @@ It creates an English-source EPUB by default. When a target language is specifie
 - Network access for the first online build, to reach the Lex website, RSS feed, and YouTube thumbnail
 - Codex CLI with model access, only for non-English translations
 
+## Install for an agent
+
+Install this skill for Codex from GitHub:
+
+```bash
+npx skills add william-zxs/william-skills \
+  --skill lex-fridman-youtube-to-epub \
+  --agent codex
+```
+
+This installs it for the current project. Add `--global` to make it available to Codex in every project:
+
+```bash
+npx skills add william-zxs/william-skills \
+  --skill lex-fridman-youtube-to-epub \
+  --agent codex --global
+```
+
+## Ask the agent to build an EPUB
+
+Give the agent these details:
+
+- A full Lex Fridman Podcast YouTube URL or its 11-character video ID (required)
+- An output directory for the generated EPUB (required)
+- The target language, if you want a translation; omit it for the original English text
+- Optional, verified overrides for the transcript URL, title, guest, or cover image when automatic discovery is unavailable
+
+For example:
+
+```text
+Use the lex-fridman-youtube-to-epub skill to turn
+https://www.youtube.com/watch?v=NYFGCESmikA into a Simplified Chinese EPUB.
+Write all generated files to /path/to/output. Verify the official transcript
+and cover before reporting the EPUB path. Do not send email.
+```
+
+For the English source edition, replace “Simplified Chinese EPUB” with “English EPUB” or omit the target language. The skill will report a clear error if the video cannot be exactly matched to an official transcript; do not ask it to substitute YouTube captions.
+
 ## Quick start
 
 Run from the repository root:
