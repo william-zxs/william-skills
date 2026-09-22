@@ -48,7 +48,6 @@ npx skills add william-zxs/william-skills \
 请使用 lex-fridman-youtube-to-epub skill。
 视频：[Lex Fridman Podcast YouTube 链接或 11 位视频 ID]
 目标语言：[目标语言；如不翻译则填英文]
-输出目录：[输出目录]
 请使用精确匹配的 Lex 官方 Transcript 和对应封面；交付前核对两者，然后报告 EPUB 路径。
 ```
 

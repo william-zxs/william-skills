@@ -48,7 +48,6 @@ Copy this paragraph, replacing the bracketed values:
 Use the lex-fridman-youtube-to-epub skill.
 Video: [Lex Fridman Podcast YouTube URL or 11-character video ID]
 Target language: [target language, or English]
-Output directory: [output directory]
 Use the exactly matched official Lex transcript and matching cover image. Verify both before reporting the EPUB path.
 ```
 
