@@ -42,23 +42,13 @@ npx skills add william-zxs/william-skills \
 
 ## Ask the agent to build an EPUB
 
-Give the agent these details:
-
-- A full Lex Fridman Podcast YouTube URL or its 11-character video ID (required)
-- An output directory for the generated EPUB (required)
-- The target language, if you want a translation; omit it for the original English text
-- Optional, verified overrides for the transcript URL, title, guest, or cover image when automatic discovery is unavailable
-
-For example:
+Copy this paragraph, replacing the bracketed values:
 
 ```text
-Use the lex-fridman-youtube-to-epub skill to turn
-https://www.youtube.com/watch?v=NYFGCESmikA into a Simplified Chinese EPUB.
-Write all generated files to /path/to/output. Verify the official transcript
-and cover before reporting the EPUB path. Do not send email.
+Use the lex-fridman-youtube-to-epub skill to convert [Lex Fridman Podcast YouTube URL or 11-character video ID] into a [target language, or English] EPUB, and write all generated files to [output directory]. Use the exactly matched official Lex transcript and the matching cover image, verify both before reporting the EPUB path, and do not send email.
 ```
 
-For the English source edition, replace “Simplified Chinese EPUB” with “English EPUB” or omit the target language. The skill will report a clear error if the video cannot be exactly matched to an official transcript; do not ask it to substitute YouTube captions.
+For example, replace the values with `https://www.youtube.com/watch?v=NYFGCESmikA`, `Simplified Chinese`, and `/path/to/output`. If the video cannot be exactly matched to an official transcript, the skill stops rather than substituting YouTube captions.
 
 ## Quick start
 

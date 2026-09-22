@@ -42,23 +42,13 @@ npx skills add william-zxs/william-skills \
 
 ## 给 Agent 的任务信息
 
-请向 Agent 提供以下信息：
-
-- 完整 Lex Fridman Podcast YouTube 链接或 11 位视频 ID（必填）
-- 生成 EPUB 的输出目录（必填）
-- 目标语言；不提供时生成英文原文
-- 仅在自动发现失败且来源已核实时提供 Transcript URL、标题、嘉宾或封面等覆盖信息
-
-例如：
+复制下面这段文字给 Agent，并替换方括号中的内容：
 
 ```text
-使用 lex-fridman-youtube-to-epub skill，将
-https://www.youtube.com/watch?v=NYFGCESmikA 制作为简体中文 EPUB。
-将所有生成文件写入 /path/to/output。交付前核对官方 Transcript 和封面，
-然后报告 EPUB 路径。不要发送邮件。
+请使用 lex-fridman-youtube-to-epub skill，将 [Lex Fridman Podcast YouTube 链接或 11 位视频 ID] 转换为 [目标语言；如不翻译则填英文] EPUB，并将所有生成文件写入 [输出目录]。请使用精确匹配的 Lex 官方 Transcript 和对应封面，交付前核对两者，然后报告 EPUB 路径；不要发送邮件。
 ```
 
-如需英文原文，将“简体中文 EPUB”改成“英文 EPUB”，或不指定目标语言。若视频无法精确匹配官方逐字稿，skill 会清楚报错；不要要求它用 YouTube 字幕替代。
+例如，将方括号内容替换为 `https://www.youtube.com/watch?v=NYFGCESmikA`、`简体中文` 和 `/path/to/output`。若视频无法精确匹配官方逐字稿，skill 会停止并报错，不会替换为 YouTube 字幕。
 
 ## 快速开始
 
