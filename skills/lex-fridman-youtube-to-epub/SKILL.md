@@ -20,6 +20,4 @@ Requires Python 3 and Pillow (`python -m pip install Pillow`). Translation addit
 
 For any translated edition, read [references/translation.md](references/translation.md). The command creates or resumes an aligned translation cache with Codex; an existing cache can be supplied with `--translation-cache`. Do not create a translated EPUB by merely changing the language metadata. For script arguments, run `python scripts/lex_youtube_to_epub.py --help`.
 
-Email delivery is a planned, optional post-build action; it is not implemented and the skill must not send mail merely because it created an EPUB. When implementing or using delivery, read [docs/lex-youtube-to-epub-email-delivery.md](../../docs/lex-youtube-to-epub-email-delivery.md). Require an explicit recipient and send authorization for each delivery unless the user has explicitly configured an automated delivery policy.
-
-Before delivery, confirm the metadata points to the intended video and transcript, chapter and segment counts are nonzero, the EPUB validates, and the cover visibly uses the correct episode image. Use the generated EPUB and cover paths in the response.
+Before reporting the result, confirm the metadata points to the intended video and transcript, chapter and segment counts are nonzero, the EPUB validates, and the cover visibly uses the correct episode image. Use the generated EPUB and cover paths in the response.

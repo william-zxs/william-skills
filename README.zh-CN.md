@@ -45,7 +45,11 @@ npx skills add william-zxs/william-skills \
 复制下面这段文字给 Agent，并替换方括号中的内容：
 
 ```text
-请使用 lex-fridman-youtube-to-epub skill，将 [Lex Fridman Podcast YouTube 链接或 11 位视频 ID] 转换为 [目标语言；如不翻译则填英文] EPUB，并将所有生成文件写入 [输出目录]。请使用精确匹配的 Lex 官方 Transcript 和对应封面，交付前核对两者，然后报告 EPUB 路径；不要发送邮件。
+请使用 lex-fridman-youtube-to-epub skill。
+视频：[Lex Fridman Podcast YouTube 链接或 11 位视频 ID]
+目标语言：[目标语言；如不翻译则填英文]
+输出目录：[输出目录]
+请使用精确匹配的 Lex 官方 Transcript 和对应封面；交付前核对两者，然后报告 EPUB 路径。
 ```
 
 例如，将方括号内容替换为 `https://www.youtube.com/watch?v=NYFGCESmikA`、`简体中文` 和 `/path/to/output`。若视频无法精确匹配官方逐字稿，skill 会停止并报错，不会替换为 YouTube 字幕。
@@ -125,7 +129,6 @@ python3 skills/lex-fridman-youtube-to-epub/scripts/lex_youtube_to_epub.py --help
 
 - 仅支持能在 Lex 官网索引中精确匹配到**官方 Transcript** 的完整节目。匹配不到的链接可能是片段、尚未发布逐字稿的节目，或不属于该播客。
 - 不能解析官方逐字稿、逐字稿为空或来源存在歧义时，工具会报错而不会猜测或替换为其他字幕。
-- 邮件发送目前未实现；构建 EPUB 不会自动发送文件。后续投递需要明确的收件人和单独授权。
 
 ## Skill 目录
 

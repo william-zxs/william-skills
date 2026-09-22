@@ -45,7 +45,11 @@ npx skills add william-zxs/william-skills \
 Copy this paragraph, replacing the bracketed values:
 
 ```text
-Use the lex-fridman-youtube-to-epub skill to convert [Lex Fridman Podcast YouTube URL or 11-character video ID] into a [target language, or English] EPUB, and write all generated files to [output directory]. Use the exactly matched official Lex transcript and the matching cover image, verify both before reporting the EPUB path, and do not send email.
+Use the lex-fridman-youtube-to-epub skill.
+Video: [Lex Fridman Podcast YouTube URL or 11-character video ID]
+Target language: [target language, or English]
+Output directory: [output directory]
+Use the exactly matched official Lex transcript and matching cover image. Verify both before reporting the EPUB path.
 ```
 
 For example, replace the values with `https://www.youtube.com/watch?v=NYFGCESmikA`, `Simplified Chinese`, and `/path/to/output`. If the video cannot be exactly matched to an official transcript, the skill stops rather than substituting YouTube captions.
@@ -125,7 +129,6 @@ Review the title, names, chapter headings, and a sample of body paragraphs after
 
 - Only full episodes that can be exactly matched to an **official transcript** in the Lex website index are supported. An unmatched URL may be a clip, an episode without a transcript, or content outside this podcast.
 - If the official transcript cannot be parsed, has no text, or has ambiguous provenance, the tool stops rather than guessing or substituting another caption source.
-- Email delivery is not implemented. EPUB creation never sends a file automatically; a future delivery action must have an explicit recipient and separate authorization.
 
 ## Skill directory
 
